@@ -41,7 +41,7 @@ namespace Monogame_Topic_2._5
             _graphics.PreferredBackBufferWidth = Window.Width;
             _graphics.PreferredBackBufferHeight = Window.Height;
 
-            quitButton = new Rectangle(10, 10, 100, 80);
+            quitButton = new Rectangle(300, 170, 200, 80);
 
             _graphics.ApplyChanges();
 
@@ -86,7 +86,7 @@ namespace Monogame_Topic_2._5
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Lime);
 
             // TODO: Add your drawing code here
 
@@ -94,7 +94,11 @@ namespace Monogame_Topic_2._5
 
             _spriteBatch.Draw(quitTexture, quitButton, Color.White);
 
-            //Change colour of "Quit" button, when the curser is over it.
+
+            if (quitButton.Contains(mouseState.Position)) 
+            {
+                _spriteBatch.Draw(quitTexture, quitButton, Color.Green);
+            }
 
             _spriteBatch.End();
 
