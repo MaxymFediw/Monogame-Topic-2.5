@@ -94,7 +94,7 @@ namespace Monogame_Topic_2._5
 
             _spriteBatch.Draw(quitTexture, quitButton, Color.White);
 
-            //Change colour of Quit Button, when the curser is over it.
+            //Change colour of "Quit" button, when the curser is over it.
 
             _spriteBatch.End();
 
